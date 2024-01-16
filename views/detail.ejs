@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Detail</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .cat-card {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .cat-card h2 {
+        margin-bottom: 10px;
+      }
+
+      .cat-card p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cat-card">
+      <p>Name: <%= cat.name %></p>
+      <p>Age: <%= cat.age %></p>
+      <p>Color: Gray</p>
+      <p>Breed: Domestic Shorthair</p>
+      <p>Description: Whiskers is a playful and friendly cat.</p>
+    </div>
+  </body>
+</html>
