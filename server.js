@@ -1,17 +1,18 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.connect(process.env.MONGO_URL);
 
 const Cat = mongoose.model('Cat', { name: String, age: Number });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
   console.log('8080에서 서버 실행');
 });
 
